@@ -127,6 +127,7 @@
 
 .welcome__title {
   margin-bottom: 61px;
+  text-transform: lowercase;
 }
 
 .welcome__title::before {
@@ -177,7 +178,7 @@
 .services__wrapper {
   width: 100%;
   padding: 120px 7.75% 159px;
-  @include flex-column(center, center, column);
+  @include flex-column(center, flex-start, column);
   background-color: $clr-green2;
 }
 
@@ -226,4 +227,58 @@
   color: $clr-grey2;
   font-size: 15px;
 }
+
 /* services section styling ends here */
+
+/* gallery section styling starts here */
+
+.gallery__wrapper {
+  padding: 100px 0 116px;
+  @include flex-column(center, flex-start, column);
+}
+
+.gallery__control {
+  margin: 60px 0 50px;
+  @include flex(center, center);
+  gap: 24px;
+}
+
+.gallery__button {
+  padding: 10px 15px;
+  background-color: $clr-grey2;
+  color: $clr-grey4;
+  font-size: 15px;
+}
+
+.gallery__control li:first-child a {
+  background-color: $clr-green2;
+  color: $clr-grey1;
+}
+
+.gallery__button:hover {
+  background-color: $clr-green2;
+  color: $clr-grey1;
+}
+
+.gallery__lists {
+  @include flex(center, center);
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.gallery__list {
+  position: relative;
+  flex: 1 0 30%;
+}
+
+.gallery__list span {
+  padding: 7px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background-color: rgba(0,0,0,.3);
+  color: $clr-grey2;
+  text-transform: capitalize;
+}
+
+/* gallery section styling ends here */

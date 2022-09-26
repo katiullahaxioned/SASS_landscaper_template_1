@@ -175,6 +175,7 @@ p {
   color: #363636;
   font-size: 36px;
   font-weight: 600;
+  text-transform: capitalize;
   word-spacing: 1px;
 }
 
@@ -326,6 +327,7 @@ p {
 
 .welcome__title {
   margin-bottom: 61px;
+  text-transform: lowercase;
 }
 
 .welcome__title::before {
@@ -385,7 +387,7 @@ p {
   padding: 120px 7.75% 159px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #69AD32;
 }
@@ -452,5 +454,63 @@ p {
 }
 
 /* services section styling ends here */
+/* gallery section styling starts here */
+.gallery__wrapper {
+  padding: 100px 0 116px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.gallery__control {
+  margin: 60px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.gallery__button {
+  padding: 10px 15px;
+  background-color: #E5E5E5;
+  color: #363636;
+  font-size: 15px;
+}
+
+.gallery__control li:first-child a {
+  background-color: #69AD32;
+  color: #F6F6F6;
+}
+
+.gallery__button:hover {
+  background-color: #69AD32;
+  color: #F6F6F6;
+}
+
+.gallery__lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 29px;
+}
+
+.gallery__list {
+  position: relative;
+  flex: 1 0 30%;
+}
+
+.gallery__list span {
+  padding: 7px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #E5E5E5;
+  text-transform: capitalize;
+}
+
+/* gallery section styling ends here */
 
 /*# sourceMappingURL=style.css.map */
