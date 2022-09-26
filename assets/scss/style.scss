@@ -8,7 +8,7 @@
 .header__wrapper {
   width: 100%;
   padding: 37px 7.75% 30px;
-  @include flex-between;
+  @include flex(center, space-between);
   background-color: $clr-grey4;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .header__menu {
-  @include flex-center;
+  @include flex(center, center);
   gap: 35px;
 }
 
@@ -82,7 +82,7 @@
 
 /* header section styling ends here */
 
-/* banner section styling ends here */
+/* banner section styling starts here */
 
 .banner__wrapper {
   width: 100%;
@@ -109,7 +109,75 @@
 .banner__sub--title {
   color: $clr-white;
   font-size: 23px;
+  line-height: 1.3;
   text-shadow: 0 0 3px $clr-black;
 }
 
-/* banner section styling starts here */
+.banner__button { margin-top: 45px; }
+
+/* banner section styling ends here */
+
+/* welcome section styling starts here */
+
+.welcome__wrapper {
+  padding: 120px 0;
+  @include flex(flex-start, center);
+  gap: 40px;
+}
+
+.welcome__title {
+  margin-bottom: 61px;
+  position: relative;
+  color: $clr-grey4;
+  font-size: 36px;
+  font-weight: 600;
+  word-spacing: 1px;
+}
+
+.welcome__title::before {
+  content: '';
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background-color: $clr-green1;
+}
+
+.welcome__title span {
+  color: $clr-green1;
+  font-weight: 700;
+}
+
+.welcome__left {
+  flex-basis: 49.6%;
+}
+
+.welcome__right ul {
+  @include flex(flex-start, center);
+  gap: 30px;
+}
+
+.welcome__para { color: $clr-grey3; }
+.welcome__left .welcome__para:last-of-type { margin-top: 20px; }
+
+.welcome__button {
+  padding: 17px 18px;
+  margin-top: 48px;
+}
+
+.welcome__right {
+  flex-basis: 50.4%;
+}
+
+.welcome__li--content h4 a {
+  margin: 21px 0 18px;
+  color: $clr-grey4;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.welcome__li--content h4 a:hover { color: $clr-green1; }
+
+/* welcome section styling ends here */
