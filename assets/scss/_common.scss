@@ -1,0 +1,16 @@
+/* common styling for all starts here */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html { scroll-behavior: smooth; }
+span { display: inline-block; }
+a { transition: all .3s; }
+input[type] { outline: none; }
+
+/* common styling for all ends here */
