@@ -164,6 +164,31 @@ p {
   background-color: #0E3A27;
 }
 
+.section-sub-title {
+  color: #66666A;
+  font-size: 19px;
+}
+
+.section-title {
+  margin-bottom: 38px;
+  position: relative;
+  color: #363636;
+  font-size: 36px;
+  font-weight: 600;
+  word-spacing: 1px;
+}
+
+.section-title::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  background-color: #69AD32;
+  transform: translateX(-50%);
+}
+
 /* common styling for all ends here */
 /* header section styling starts here */
 .header__wrapper {
@@ -292,7 +317,7 @@ p {
 /* banner section styling ends here */
 /* welcome section styling starts here */
 .welcome__wrapper {
-  padding: 120px 0;
+  padding: 120px 0 119px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -301,21 +326,11 @@ p {
 
 .welcome__title {
   margin-bottom: 61px;
-  position: relative;
-  color: #363636;
-  font-size: 36px;
-  font-weight: 600;
-  word-spacing: 1px;
 }
 
 .welcome__title::before {
-  content: "";
-  width: 70px;
-  height: 3px;
-  position: absolute;
-  top: 140%;
   left: 0;
-  background-color: #69AD32;
+  transform: translateX(0);
 }
 
 .welcome__title span {
@@ -364,5 +379,78 @@ p {
 }
 
 /* welcome section styling ends here */
+/* services section styling starts here */
+.services__wrapper {
+  width: 100%;
+  padding: 120px 7.75% 159px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #69AD32;
+}
+
+.services__title {
+  color: #fff;
+}
+
+.services__title::before {
+  background-color: #E5E5E5;
+}
+
+.services__sub--title {
+  color: #fff;
+}
+
+.services__lists {
+  margin-top: 86px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.services__lists li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.services__lists figure {
+  width: 224px;
+  height: 224px;
+  padding: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #78B546;
+}
+
+.services__lists figure img {
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.services__li--content a {
+  margin: 30px 0 10px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.services__li--content a:hover {
+  color: #0E3A27;
+}
+
+.services__para {
+  color: #E5E5E5;
+  font-size: 15px;
+}
+
+/* services section styling ends here */
 
 /*# sourceMappingURL=style.css.map */

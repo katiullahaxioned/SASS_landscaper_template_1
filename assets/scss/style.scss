@@ -33,7 +33,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: $clr-green1;
+  background-color: $clr-green2;
   transition: all .3s;
   text-indent: -99999px;
 }
@@ -78,7 +78,7 @@
   text-transform: uppercase;
 }
 
-.header__menu a:hover { color: $clr-green1; }
+.header__menu a:hover { color: $clr-green2; }
 
 /* header section styling ends here */
 
@@ -120,32 +120,22 @@
 /* welcome section styling starts here */
 
 .welcome__wrapper {
-  padding: 120px 0;
+  padding: 120px 0 119px;
   @include flex(flex-start, center);
   gap: 40px;
 }
 
 .welcome__title {
   margin-bottom: 61px;
-  position: relative;
-  color: $clr-grey4;
-  font-size: 36px;
-  font-weight: 600;
-  word-spacing: 1px;
 }
 
 .welcome__title::before {
-  content: '';
-  width: 70px;
-  height: 3px;
-  position: absolute;
-  top: 140%;
   left: 0;
-  background-color: $clr-green1;
+  transform: translateX(0);
 }
 
 .welcome__title span {
-  color: $clr-green1;
+  color: $clr-green2;
   font-weight: 700;
 }
 
@@ -178,6 +168,62 @@
   text-transform: capitalize;
 }
 
-.welcome__li--content h4 a:hover { color: $clr-green1; }
+.welcome__li--content h4 a:hover { color: $clr-green2; }
 
 /* welcome section styling ends here */
+
+/* services section styling starts here */
+
+.services__wrapper {
+  width: 100%;
+  padding: 120px 7.75% 159px;
+  @include flex-column(center, center, column);
+  background-color: $clr-green2;
+}
+
+.services__title { color: $clr-white; }
+.services__title::before { background-color: $clr-grey2; }
+.services__sub--title { color: $clr-white; }
+
+.services__lists {
+  margin-top: 86px;
+  @include flex(flex-start, center);
+  gap: 30px;
+  text-align: center;
+}
+
+.services__lists li {
+  @include flex-column(center, flex-start, column);
+}
+
+.services__lists figure {
+  width: 224px;
+  height: 224px;
+  padding: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: $clr-green1;
+}
+
+.services__lists figure img {
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  transition: all .3s;
+}
+
+.services__li--content a {
+  margin: 30px 0 10px;
+  color: $clr-white;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.services__li--content a:hover { color: $clr-green3; }
+
+.services__para {
+  color: $clr-grey2;
+  font-size: 15px;
+}
+/* services section styling ends here */
