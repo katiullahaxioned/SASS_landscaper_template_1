@@ -81,3 +81,35 @@
 .header__menu a:hover { color: $clr-green1; }
 
 /* header section styling ends here */
+
+/* banner section styling ends here */
+
+.banner__wrapper {
+  width: 100%;
+}
+
+.banner__content {
+  width: 100%;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.banner__heading {
+  margin-bottom: 20px;
+  color: $clr-white;
+  font-size: 59px;
+  font-weight: 600;
+  text-shadow: 0 0 3px $clr-black;
+  text-transform: uppercase;
+}
+
+.banner__sub--title {
+  color: $clr-white;
+  font-size: 23px;
+  text-shadow: 0 0 3px $clr-black;
+}
+
+/* banner section styling starts here */
