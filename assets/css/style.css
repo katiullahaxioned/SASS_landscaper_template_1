@@ -694,6 +694,7 @@ p {
   position: relative;
   background-color: #464646;
   color: #69AD32;
+  font-size: 22px;
   text-indent: -99999px;
 }
 .footer__social--icon a::before {
