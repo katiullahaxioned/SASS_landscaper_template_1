@@ -11,7 +11,12 @@
 html { scroll-behavior: smooth; }
 span { display: inline-block; }
 a { transition: all .3s; }
-input[type] { outline: none; }
+
+input[type],
+textarea {
+  outline: none;
+}
+
 ::first-letter { text-transform: uppercase; }
 p { line-height: 1.5; }
 

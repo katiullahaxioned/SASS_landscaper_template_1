@@ -53,17 +53,21 @@
   }
   
   
-  &:hover .header__bar {
-    top: 13px;
-    transform: rotate(45deg);
+  &:hover {
+    .header__bar {
+      top: 13px;
+      transform: rotate(45deg);
+     
+      &::before { display: none; }
+      
+      &::after {
+        top: 0;
+        transform: rotate(-90deg);
+      }
+    }
   }
   
-  &:hover .header__bar::before { display: none; }
   
-  &:hover .header__bar::after {
-    top: 0px;
-    transform: rotate(-90deg);
-  }
 }
 
 .header__menu {
@@ -144,7 +148,9 @@
 .welcome__left {
   flex-basis: 49.6%;
   
-  .welcome__para:last-of-type { margin-top: 20px; }
+  .welcome__para {
+    &:last-of-type { margin-top: 20px; }
+  }
 }
 
 .welcome__para { color: $clr-grey3; }
@@ -163,14 +169,16 @@
   }
 }
 
-.welcome__li--content h4 a {
-  margin: 21px 0 18px;
-  color: $clr-grey4;
-  font-size: 22px;
-  font-weight: 600;
-  text-transform: capitalize;
+.welcome__li--content {
+  a {
+    margin: 21px 0 18px;
+    color: $clr-grey4;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
 
-  &:hover { color: $clr-green2; }
+    &:hover { color: $clr-green2; }
+}   
 }
 
 /* welcome section styling ends here */
@@ -219,13 +227,15 @@
   }
 }
 
-.services__li--content a {
-  margin: 30px 0 10px;
-  color: $clr-white;
-  font-size: 24px;
-  text-transform: capitalize;
+.services__li--content {
+  a {
+    margin: 30px 0 10px;
+    color: $clr-white;
+    font-size: 24px;
+    text-transform: capitalize;
 
-  &:hover { color: $clr-green3; }
+    &:hover { color: $clr-green3; }
+  }
 }
 
 .services__para {
@@ -247,9 +257,13 @@
   @include flex(center, center);
   gap: 24px;
   
-  li:first-child a {
-    background-color: $clr-green2;
-    color: $clr-grey1;
+  li {
+    &:first-child {
+      a {
+        background-color: $clr-green2;
+        color: $clr-grey1;
+      }
+    } 
   }
 }
 
@@ -302,7 +316,7 @@
 
 .testimonials__wrapper {
   width: 100%;
-  padding: 120px 17% 130px;
+  padding: 120px 15% 130px;
   @include flex-column(center, flex-start, column);
   position: relative;
   background: url('../images/testimonial.png') no-repeat center;
@@ -315,7 +329,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(69, 175, 65, 0.6);
+    background-color: rgba(20, 182, 15, 0.6);
   }
 }
 
@@ -326,12 +340,26 @@
 }
 
 .user-comments {
+  margin: 54px 0 31px;
   z-index: 1;
   color: $clr-white;
   text-align: center;
 
-  li:not(:first-child) {
-    display: none;
+  li {
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+.testimonials__user--comment {
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 1.9;
+
+  &::before,
+  &::after {
+    content: '"';
   }
 }
 
@@ -345,12 +373,120 @@
     height: 12px;
     border-radius: 50%;
     background-color: $clr-grey2;
+    cursor: pointer;
     text-indent: -99999px;
+    transition: all .3s;
 
-    &:first-child {
-      background-color: $clr-white;
-    }
+    &:first-child { background-color: $clr-white; }
+
+    &:hover { background-color: $clr-white; }
   }
 }
 
 /* testimonials section styling ends here */
+
+/* contact section styling starts here */
+
+.contact__wrapper {
+  width: 100%;
+  padding: 100px 7.75%;
+  @include flex-column(center, flex-start, column);
+  background-color: $clr-grey1;
+}
+
+.contact__details {
+  width: 100%;
+  margin: 89px 0 78px;
+  @include flex(center, center);
+  gap: 9.5%;
+  text-align: center;
+
+  @at-root {
+    .contact__details--title {
+      margin-bottom: 34px;
+      position: relative;
+      color: $clr-grey4;
+      font-weight: 600;
+      text-transform: uppercase;
+  
+      &::before {
+        content: '';
+        width: 70px;
+        height: 3px;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        background-color: $clr-grey2;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  span,
+  a {
+    margin-bottom: 15px;
+    display: block;
+    color: $clr-grey3;
+    font-size: 15px;
+    word-spacing: 2px;
+  }
+}
+
+.contact__form--title {
+  margin-bottom: 39px;
+  color: $clr-grey4;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact__form {
+  width: 64%;
+  @include flex(center, space-between);
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @at-root {
+    .contact__input-group {
+      > * {
+        width: 100%;
+        padding: 11px 19px;
+        border: 1px solid $clr-grey2;
+        font-size: 16px;
+
+        &::placeholder {
+          text-transform: capitalize;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        flex-basis: 48%;
+      }
+
+      &:nth-child(3) {
+        flex: 1 0 100%;
+
+        textarea {
+          min-height: 130px;
+          padding: 21px 19px;
+          resize: vertical;
+        }
+      }
+    }
+
+    .contact__input-control {
+      margin-top: 16px;
+      flex: 1 0 100%;
+      text-align: center;
+      
+      input {
+        padding: 17px 19px;
+        border: none;
+        font-size: 16px;
+        transition: all .3s;
+      }
+    }
+  }
+}
+
+/* contact section styling ends here */

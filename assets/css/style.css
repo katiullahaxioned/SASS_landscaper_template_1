@@ -137,7 +137,8 @@ a {
   transition: all 0.3s;
 }
 
-input[type] {
+input[type],
+textarea {
   outline: none;
 }
 
@@ -248,7 +249,7 @@ p {
   display: none;
 }
 .header__hamburger:hover .header__bar::after {
-  top: 0px;
+  top: 0;
   transform: rotate(-90deg);
 }
 
@@ -353,14 +354,14 @@ p {
   gap: 30px;
 }
 
-.welcome__li--content h4 a {
+.welcome__li--content a {
   margin: 21px 0 18px;
   color: #363636;
   font-size: 22px;
   font-weight: 600;
   text-transform: capitalize;
 }
-.welcome__li--content h4 a:hover {
+.welcome__li--content a:hover {
   color: #69AD32;
 }
 
@@ -498,7 +499,7 @@ p {
 /* testimonials section styling starts here */
 .testimonials__wrapper {
   width: 100%;
-  padding: 120px 17% 130px;
+  padding: 120px 15% 130px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -514,7 +515,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(69, 175, 65, 0.6);
+  background-color: rgba(20, 182, 15, 0.6);
 }
 
 .testimonials__title {
@@ -525,12 +526,22 @@ p {
 }
 
 .user-comments {
+  margin: 54px 0 31px;
   z-index: 1;
   color: #fff;
   text-align: center;
 }
 .user-comments li:not(:first-child) {
   display: none;
+}
+
+.testimonials__user--comment {
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 1.9;
+}
+.testimonials__user--comment::before, .testimonials__user--comment::after {
+  content: '"';
 }
 
 .testimonials__controls {
@@ -545,12 +556,113 @@ p {
   height: 12px;
   border-radius: 50%;
   background-color: #E5E5E5;
+  cursor: pointer;
   text-indent: -99999px;
+  transition: all 0.3s;
 }
 .testimonials__controls span:first-child {
   background-color: #fff;
 }
+.testimonials__controls span:hover {
+  background-color: #fff;
+}
 
 /* testimonials section styling ends here */
+/* contact section styling starts here */
+.contact__wrapper {
+  width: 100%;
+  padding: 100px 7.75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background-color: #F6F6F6;
+}
+
+.contact__details {
+  width: 100%;
+  margin: 89px 0 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9.5%;
+  text-align: center;
+}
+.contact__details--title {
+  margin-bottom: 34px;
+  position: relative;
+  color: #363636;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contact__details--title::before {
+  content: "";
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  background-color: #E5E5E5;
+  transform: translateX(-50%);
+}
+
+.contact__details span,
+.contact__details a {
+  margin-bottom: 15px;
+  display: block;
+  color: #66666A;
+  font-size: 15px;
+  word-spacing: 2px;
+}
+
+.contact__form--title {
+  margin-bottom: 39px;
+  color: #363636;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact__form {
+  width: 64%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.contact__input-group > * {
+  width: 100%;
+  padding: 11px 19px;
+  border: 1px solid #E5E5E5;
+  font-size: 16px;
+}
+.contact__input-group > *::placeholder {
+  text-transform: capitalize;
+}
+.contact__input-group:nth-child(1), .contact__input-group:nth-child(2) {
+  flex-basis: 48%;
+}
+.contact__input-group:nth-child(3) {
+  flex: 1 0 100%;
+}
+.contact__input-group:nth-child(3) textarea {
+  min-height: 130px;
+  padding: 21px 19px;
+  resize: vertical;
+}
+
+.contact__input-control {
+  margin-top: 16px;
+  flex: 1 0 100%;
+  text-align: center;
+}
+.contact__input-control input {
+  padding: 17px 19px;
+  border: none;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+/* contact section styling ends here */
 
 /*# sourceMappingURL=style.css.map */
