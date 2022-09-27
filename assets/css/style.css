@@ -192,6 +192,7 @@ p {
 }
 
 /* common styling for all ends here */
+/* main section styling starts here */
 /* header section styling starts here */
 .header__wrapper {
   width: 100%;
@@ -614,6 +615,9 @@ p {
   font-size: 15px;
   word-spacing: 2px;
 }
+.contact__details a:hover {
+  text-decoration: underline;
+}
 
 .contact__form--title {
   margin-bottom: 39px;
@@ -664,5 +668,69 @@ p {
 }
 
 /* contact section styling ends here */
+/* main section styling ends here */
+/* footer section styling starts here */
+.footer__wrapper {
+  width: 100%;
+  padding: 40px 7.75% 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 50px;
+  background-color: #363636;
+}
+
+.footer__social--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+}
+.footer__social--icon a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #464646;
+  color: #69AD32;
+  text-indent: -99999px;
+}
+.footer__social--icon a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  transform: translate(-50%, -50%);
+}
+.footer__social--icon a:hover {
+  background-color: #69AD32;
+  color: #363636;
+}
+.footer__social--icon li:nth-child(1) a::before {
+  content: "\f09a";
+}
+.footer__social--icon li:nth-child(2) a::before {
+  content: "\f099";
+}
+.footer__social--icon li:nth-child(3) a::before {
+  content: "\f0d5";
+}
+
+.footer__copyright {
+  color: #66666A;
+  font-size: 15px;
+  word-spacing: 2px;
+}
+.footer__copyright a {
+  color: #888;
+}
+.footer__copyright a:hover {
+  color: #E5E5E5;
+  text-decoration: underline;
+}
+
+/* footer section styling ends here */
 
 /*# sourceMappingURL=style.css.map */
